@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0c0c0d;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 500;
+  }
+  
+  .btn {
+    line-height: 1.8rem;
+    border-radius: 9.5px;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    position: relative;
+    background-color: #18181b;
+    color: #f4f4f5;
+    transition: background-color 0.2s ease-in-out;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    width: 175px;
+    cursor: pointer; /* Not included according to website */
+  }
+  
+  .btn:hover {
+    background-color: #0c0c0d;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      rgb(0, 220, 130),
+      rgb(54, 228, 218),
+      rgb(22, 167, 158)
+    );
+    inset: -2px;
+    z-index: -1;
+    border-radius: 12.5px;
+    transition: all 0.2s ease 0s;
+  }
+  
+  .btn:hover:before {
+    box-shadow: rgba(0, 220, 130, 0.5) 0px 0px 10px 0px,
+      rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
+  }
+  
+  .btn > span {
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    cursor: pointer;
+  }
+  :root {
+    --yellow-color: rgba(255, 208, 116);
+    --turquoise-color: rgba(23, 241, 209);
+    --purple-color: rgba(176, 135, 255);
+  }
+  
+  /* body {
+    background-color: black;
+    color: white;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  } */
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-ul {
+    font-family: Segoe UI;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 7.5rem;
+    letter-spacing: -0.05em;
+  }
+  
+  .nav-li {
+    position: relative;
+    line-height: 0.76471;
+  }
+  
+  .nav-li + .nav-li {
+    margin-top: 1rem;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-a {
+    display: inline-block;
+    position: relative;
+    transition: 0.4s linear color;
+  }
+  
+  .nav-a-letters {
+    display: flex;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .nav-a > * {
+      pointer-events: none;
+    }
+  }
+  
+  .nav-a-stripe {
+    position: absolute;
+    background-color: var(--purple-color);
+    width: calc(100% + 0.075em);
+    left: 0;
+    top: 0.5em;
+    height: 0.115em;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0, 1);
+  }
+  
+  .nav-a-stripe--yellow {
+    background-color: var(--yellow-color);
+    transition-delay: 0.1s;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .nav-a:hover .nav-a-stripe {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    .nav-a:hover .nav-a-stripe--yellow {
+      transition-delay: 0s;
+    }
+  }
+  
+  .nav-a-stripe--turquoise {
+    background-color: var(--turquoise-color);
+    transition-delay: 50ms;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .nav-a:hover .nav-a-stripe--turquoise {
+      transition-delay: 50ms;
+    }
+    .nav-a:hover .nav-a-stripe--purple {
+      transition-delay: 0.1s;
+    }
+  }
+  
+  .nav-a-letters-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+  }
+  
+  .nav-a-letter {
+    display: block;
+    will-change: transform, opacity;
+  }
+  
+  .nav-a-letters .nav-a-letter:nth-child(2n) {
+    opacity: 0;
+  }
+  
+  .nav-a-letters-top .nav-a-letter:nth-child(2n + 1) {
+    opacity: 0 !important;
+  }
+
+header {
+    
+    padding: 20px;
+    text-align: center;
+}
+
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+main {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up 1 fractional unit */
+    gap: 10px; /* add a 10px gap between columns and rows */
+      
+}
+
+section {
+    
+    padding: 5px;
+    margin-bottom: 5px;
+    display: inline;
+    
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* adjust the height as needed */
+    margin: 10px;
+    text-align: center;
+    margin-left: auto;
+    padding: 10px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+   
+    padding: 20px;
+    
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* h1 {
+    font-size: 50px;
+    word-break: break-all;
+  } */
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    
+    padding: 10px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: #666;
+     color: white;
+  }
+  /* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  right: 0%;
+  transform: translate(-50%, -200%);
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ResumeCSS.css">
+    <title>Resume</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- Navigation content -->
+             <div class="container">
+        <ul class="nav-ul">
+          <li class="nav-li">
+            <a href="https://github.com/akdavis83" class="nav-a">
+              <span class="nav-a-letters">
+                <span class="nav-a-letter"> g</span>
+                <span class="nav-a-letter"> i</span>
+                <span class="nav-a-letter"> t</span>
+                <span class="nav-a-letter"> h</span>
+                <span class="nav-a-letter"> u</span>
+                <span class="nav-a-letter"> b</span>
+              </span>
+              <span class="nav-a-stripe nav-a-stripe--yellow"> </span>
+              <span class="nav-a-stripe nav-a-stripe--turquoise"> </span>
+              <span class="nav-a-stripe nav-a-stripe--purple"> </span>
+              <span class="nav-a-letters-top">
+                <span class="nav-a-letter"> g</span>
+                <span class="nav-a-letter"> i</span>
+                <span class="nav-a-letter"> t</span>
+                <span class="nav-a-letter"> h</span>
+                <span class="nav-a-letter"> u</span>
+                <span class="nav-a-letter"> b</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <img src="github.png" style="height: 50px" width="45px">
+      </div>
+      <br>
+      <br>
+      <br>
+<img class="hero-image" src="digital plane.jpg" style="height: 25%;"> 
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Click for GITHUB Above OR Resume Button Below For My Resume!</h1>
+  </div>
+</div>
+        </nav>
+    </header>
+
+    <main style="display: block;">
+   
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="web design.jpg" alt="Web" style="width:250px">
+      <h4>Web 3 Development</h4>
+      <p style="color: blue;">Your wildest wishes, imaginations, and dreams will stratgically come alive on screen; designed and made to order</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="html.png" alt="HTML" style="width:100px">
+      <h4>HTML</h4>
+      <p style="color: red">Skilled in HTML development</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="js.png" alt="HTML" style="width:100px">
+      <h4>JavaScript</h4>
+      <p style="color: yellow">Critical problem solving skills, adept JS coding skills</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="intense code.jpg" alt="HTML" style="width:200px">
+      <h4>Coding</h4>
+      <p style="color: rgb(15, 34, 117)">Flexible, adaptable, cool under pressure, team player, able to handle intense coding opportunities and find the desired solutions</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="react.png" alt="React" style="width:100px">
+      <h4>React</h4>
+      <p style="color: rgb(41, 152, 189);">Expertise in building React components and sites</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="blockchain-1-1024x597.jpg" alt="Blockchain" style="width:100px">
+      <h4>Blockchain</h4>
+      <p style="color: goldenrod;">Passionate about Defi and Blockchain, custom blockchain solutions</p>
+    </div>
+  </div>
+  
+<!-- END GRID -->
+</div>
+        
+
+        <!-- More sections or content -->
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+         <a class="btn" href="Resume 2024-3.docx"><span> RESUME </span></a>
+         <a class="btn" href="ResumeSite2.html"><span> CERTS </span></a>
+    </footer>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+    <script>
+        filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
+</body>
+</html>
